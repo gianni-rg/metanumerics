@@ -90,7 +90,9 @@ namespace Meta.Numerics {
         /// Produces the representation of the uncertain value for the Python interactive console.
         /// </summary>
         /// <returns>A string representation of the uncertain value.</returns>
+#if !SILVERLIGHT
         [CLSCompliant(false)]
+#endif
         public string __repr__ () {
             return(ToString());
         }

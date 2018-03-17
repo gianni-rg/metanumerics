@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAD1D08F-3E2D-4EC7-814C-A13D241FAEF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Meta.Numerics</RootNamespace>
+    <AssemblyName>Meta.Numerics</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;CODE_ANALYSIS, SHO;CODE_ANALYSIS, SHO,SILVERLIGHT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SHO;SILVERLIGHT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\Tools\immotionroom_ts.snk.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="immotionroom_ts.snk.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Core\Core\BigFloat.cs">
+      <Link>Core\BigFloat.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Complex.cs">
+      <Link>Core\Complex.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\ComplexMath.cs">
+      <Link>Core\ComplexMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Exceptions.cs">
+      <Link>Core\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Functions.cs">
+      <Link>Core\Functions.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Global.cs">
+      <Link>Core\Global.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Interval.cs">
+      <Link>Core\Interval.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\MoreMath.cs">
+      <Link>Core\MoreMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Point.cs">
+      <Link>Core\Point.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\Polynomial.cs">
+      <Link>Core\Polynomial.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\PolynomialInterpolation.cs">
+      <Link>Core\PolynomialInterpolation.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\UncertainMath.cs">
+      <Link>Core\UncertainMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Core\UncertainValue.cs">
+      <Link>Core\UncertainValue.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedIntegerMath.cs">
+      <Link>Functions\AdvancedIntegerMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath.cs">
+      <Link>Functions\AdvancedMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Bessel.cs">
+      <Link>Functions\AdvancedMath_Bessel.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Constants.cs">
+      <Link>Functions\AdvancedMath_Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Coulomb.cs">
+      <Link>Functions\AdvancedMath_Coulomb.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Elliptic.cs">
+      <Link>Functions\AdvancedMath_Elliptic.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Error.cs">
+      <Link>Functions\AdvancedMath_Error.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Exponential.cs">
+      <Link>Functions\AdvancedMath_Exponential.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Gamma.cs">
+      <Link>Functions\AdvancedMath_Gamma.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Harmonic.cs">
+      <Link>Functions\AdvancedMath_Harmonic.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Inverse.cs">
+      <Link>Functions\AdvancedMath_Inverse.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Kelvin.cs">
+      <Link>Functions\AdvancedMath_Kelvin.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Lambert.cs">
+      <Link>Functions\AdvancedMath_Lambert.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_ModifiedBessel.cs">
+      <Link>Functions\AdvancedMath_ModifiedBessel.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Polylog.cs">
+      <Link>Functions\AdvancedMath_Polylog.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\AdvancedMath_Riemann.cs">
+      <Link>Functions\AdvancedMath_Riemann.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath.cs">
+      <Link>Functions\FunctionMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_Differentiate.cs">
+      <Link>Functions\FunctionMath_Differentiate.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_Extrema.cs">
+      <Link>Functions\FunctionMath_Extrema.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_Integrate.cs">
+      <Link>Functions\FunctionMath_Integrate.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_MultiExtrema.cs">
+      <Link>Functions\FunctionMath_MultiExtrema.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_MultiIntegrate.cs">
+      <Link>Functions\FunctionMath_MultiIntegrate.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\FunctionMath_Roots.cs">
+      <Link>Functions\FunctionMath_Roots.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Functions\OrthogonalPolynomials.cs">
+      <Link>Functions\OrthogonalPolynomials.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\AnyMatrix.cs">
+      <Link>Matrices\AnyMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\AnyRectangularMatrix.cs">
+      <Link>Matrices\AnyRectangularMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\AnySquareMatrix.cs">
+      <Link>Matrices\AnySquareMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\Blas.cs">
+      <Link>Matrices\Blas.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\CholeskyDecomposition.cs">
+      <Link>Matrices\CholeskyDecomposition.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\ColumnVector.cs">
+      <Link>Matrices\ColumnVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\ComplexEigensystem.cs">
+      <Link>Matrices\ComplexEigensystem.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\ComplexVector.cs">
+      <Link>Matrices\ComplexVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\Interfaces.cs">
+      <Link>Matrices\Interfaces.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\QRDecomposition.cs">
+      <Link>Matrices\QRDecomposition.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\RealEigensystem.cs">
+      <Link>Matrices\RealEigensystem.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\RectangularMatrix.cs">
+      <Link>Matrices\RectangularMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\RectangularMatrixAlgorithms.cs">
+      <Link>Matrices\RectangularMatrixAlgorithms.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\RowVector.cs">
+      <Link>Matrices\RowVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SingularValueDecomposition.cs">
+      <Link>Matrices\SingularValueDecomposition.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SparseSquareMatrix.cs">
+      <Link>Matrices\SparseSquareMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SquareLUDecomposition.cs">
+      <Link>Matrices\SquareLUDecomposition.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SquareMatrix.cs">
+      <Link>Matrices\SquareMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SquareMatrixAlgorithms.cs">
+      <Link>Matrices\SquareMatrixAlgorithms.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SquareQRDecomposition.cs">
+      <Link>Matrices\SquareQRDecomposition.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\SymmetricMatrix.cs">
+      <Link>Matrices\SymmetricMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\TridiagonalMatrix.cs">
+      <Link>Matrices\TridiagonalMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\VectorBase.cs">
+      <Link>Matrices\VectorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Matrices\Vectors.cs">
+      <Link>Matrices\Vectors.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\SignalProcessing\FourierAlgorithms.cs">
+      <Link>SignalProcessing\FourierAlgorithms.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\SignalProcessing\FourierTransformer.cs">
+      <Link>SignalProcessing\FourierTransformer.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Special\Spin.cs">
+      <Link>Special\Spin.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Special\SpinMath.cs">
+      <Link>Special\SpinMath.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Special\SpinState.cs">
+      <Link>Special\SpinState.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Anova.cs">
+      <Link>Statistics\Anova.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\BinaryContingencyTable.cs">
+      <Link>Statistics\BinaryContingencyTable.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\BivariateSample.cs">
+      <Link>Statistics\BivariateSample.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\ContingencyTable.cs">
+      <Link>Statistics\ContingencyTable.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\DiscreteHistogram.cs">
+      <Link>Statistics\DiscreteHistogram.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\BernoulliDistribution.cs">
+      <Link>Statistics\Distributions\BernoulliDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\BetaDistribution.cs">
+      <Link>Statistics\Distributions\BetaDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\BinomialDistribution.cs">
+      <Link>Statistics\Distributions\BinomialDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\CauchyDistribution.cs">
+      <Link>Statistics\Distributions\CauchyDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\ChiSquaredDistribution.cs">
+      <Link>Statistics\Distributions\ChiSquaredDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\DiscreteAsContinuousDistribution.cs">
+      <Link>Statistics\Distributions\DiscreteAsContinuousDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\DiscreteDistribution.cs">
+      <Link>Statistics\Distributions\DiscreteDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\DiscreteUniformDistribution.cs">
+      <Link>Statistics\Distributions\DiscreteUniformDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\Distribution.cs">
+      <Link>Statistics\Distributions\Distribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\ExponentialDistribution.cs">
+      <Link>Statistics\Distributions\ExponentialDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\FisherDistribution.cs">
+      <Link>Statistics\Distributions\FisherDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\GammaDistribution.cs">
+      <Link>Statistics\Distributions\GammaDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\GeometricDistribution.cs">
+      <Link>Statistics\Distributions\GeometricDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\GumbelDistribution.cs">
+      <Link>Statistics\Distributions\GumbelDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\IDeviateGenerator.cs">
+      <Link>Statistics\Distributions\IDeviateGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\KendallDistribution.cs">
+      <Link>Statistics\Distributions\KendallDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\KolmogorovDistribution.cs">
+      <Link>Statistics\Distributions\KolmogorovDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\KuiperDistribution.cs">
+      <Link>Statistics\Distributions\KuiperDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\LogisticDistribution.cs">
+      <Link>Statistics\Distributions\LogisticDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\LognormalDistribution.cs">
+      <Link>Statistics\Distributions\LognormalDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\MannWhitneyDistribution.cs">
+      <Link>Statistics\Distributions\MannWhitneyDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\NormalDistribution.cs">
+      <Link>Statistics\Distributions\NormalDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\ParetoDistribution.cs">
+      <Link>Statistics\Distributions\ParetoDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\PearsonRDistribution.cs">
+      <Link>Statistics\Distributions\PearsonRDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\PoissonDistribution.cs">
+      <Link>Statistics\Distributions\PoissonDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\SpearmanDistribution.cs">
+      <Link>Statistics\Distributions\SpearmanDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\StudentDistribution.cs">
+      <Link>Statistics\Distributions\StudentDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\TransformedDistribution.cs">
+      <Link>Statistics\Distributions\TransformedDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\TriangularDistribution.cs">
+      <Link>Statistics\Distributions\TriangularDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\TruncatedNormalDistribution.cs">
+      <Link>Statistics\Distributions\TruncatedNormalDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\UniformDistribution.cs">
+      <Link>Statistics\Distributions\UniformDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\WaldDistribution.cs">
+      <Link>Statistics\Distributions\WaldDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Distributions\WeibullDistribution.cs">
+      <Link>Statistics\Distributions\WeibullDistribution.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\FitResult.cs">
+      <Link>Statistics\FitResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Histogram.cs">
+      <Link>Statistics\Histogram.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\InsufficientDataException.cs">
+      <Link>Statistics\InsufficientDataException.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\MultivariateSample.cs">
+      <Link>Statistics\MultivariateSample.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\PrincipalComponentAnalysis.cs">
+      <Link>Statistics\PrincipalComponentAnalysis.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\Sample.cs">
+      <Link>Statistics\Sample.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\TestResult.cs">
+      <Link>Statistics\TestResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\UncertainMeasurement.cs">
+      <Link>Statistics\UncertainMeasurement.cs</Link>
+    </Compile>
+    <Compile Include="..\Core\Statistics\UncertainMeasurementSample.cs">
+      <Link>Statistics\UncertainMeasurementSample.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

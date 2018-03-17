@@ -101,7 +101,9 @@ namespace Meta.Numerics {
         /// Produces the representation of the complex number for the Python interactive console.
         /// </summary>
         /// <returns>A string representation of the complex number.</returns>
+#if !SILVERLIGHT
         [CLSCompliant(false)]
+#endif
         public string __repr__ () {
             return(ToString());
         }

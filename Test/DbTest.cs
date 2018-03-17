@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Meta.Numerics.Statistics;
 
 namespace Test {
-
+    [Ignore]
     [TestClass]
     public class DbTest {
 
@@ -25,39 +25,43 @@ namespace Test {
             return (table);
 
         }
-
+        
         [TestMethod]
         public void LoadSample () {
 
-            DataTable table = CreateTable();
+            throw new NotSupportedException("PCL Library does not support DB");
+            //DataTable table = CreateTable();
 
-            Sample sample = new Sample();
-            sample.Load(table.CreateDataReader(), 1);
-            Console.Write("{0} {1} {2}", sample.Count, sample.Mean, sample.StandardDeviation);
-            Assert.IsTrue(sample.Count == table.Rows.Count - 1);
+            //Sample sample = new Sample();
+            //sample.Load(table.CreateDataReader(), 1);
+            //Console.Write("{0} {1} {2}", sample.Count, sample.Mean, sample.StandardDeviation);
+            //Assert.IsTrue(sample.Count == table.Rows.Count - 1);
 
 
         }
-
+        
         [TestMethod]
         public void LoadBivariateSample () {
 
-            DataTable table = CreateTable();
+            throw new NotSupportedException("PCL Library does not support DB");
+            //DataTable table = CreateTable();
 
-            BivariateSample sample = new BivariateSample();
-            sample.Load(table.CreateDataReader(), 1, 3);
-            Assert.IsTrue(sample.Count == table.Rows.Count - 1);
+            //BivariateSample sample = new BivariateSample();
+            //sample.Load(table.CreateDataReader(), 1, 3);
+            //Assert.IsTrue(sample.Count == table.Rows.Count - 1);
 
         }
-
+        
         [TestMethod]
         public void LoadMultivariateSample () {
 
-            DataTable table = CreateTable();
+            throw new NotSupportedException("PCL Library does not support DB");
 
-            MultivariateSample sample = new MultivariateSample(3);
-            sample.Load(table.CreateDataReader(), 1, 2, 3);
-            Assert.IsTrue(sample.Count == table.Rows.Count - 1);
+            //DataTable table = CreateTable();
+
+            //MultivariateSample sample = new MultivariateSample(3);
+            //sample.Load(table.CreateDataReader(), 1, 2, 3);
+            //Assert.IsTrue(sample.Count == table.Rows.Count - 1);
 
         }
 

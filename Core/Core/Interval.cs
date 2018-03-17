@@ -177,7 +177,9 @@ namespace Meta.Numerics {
         /// Produces a representation of the interval for the Python interactive console.
         /// </summary>
         /// <returns>A string representation of the inverval.</returns>
+#if !SILVERLIGHT
         [CLSCompliant(false)]
+#endif
         public string __repr__ () {
             return(ToString());
         }
