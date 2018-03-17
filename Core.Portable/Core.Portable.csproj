@@ -34,15 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\..\Tools\immotionroom_ts.snk.pfx</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="immotionroom_ts.snk.pfx" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Core\Core\BigFloat.cs">
       <Link>Core\BigFloat.cs</Link>
